@@ -1,0 +1,43 @@
+CREATE TABLE `t_board` (
+  `board_idx` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(300) NOT NULL,
+  `contents` mediumtext NOT NULL,
+  `hit_cnt` smallint(10) NOT NULL DEFAULT '0',
+  `created_datetime` datetime NOT NULL,
+  `creator_id` varchar(50) NOT NULL,
+  `updated_datetime` datetime DEFAULT NULL,
+  `updater_id` varchar(50) DEFAULT NULL,
+  `deleted_yn` char(1) NOT NULL DEFAULT 'N',
+  PRIMARY KEY (`board_idx`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8
+
+
+
+
+
+Chapter04
+---------------------
+1. MySQL DB 한글입력X
+ALTER TABLE t_board CONVERT TO CHARSET utf8;
+
+
+
+
+Chapter05
+---------------------
+2.Intercpter 
+-preHandle
+-postHandle
+-afterCompletion
+
+3. AOP
+로그출력에 적용, 컨트롤러/서비스/매퍼의 메소드 실행될때 각 메서드의 경로 및 이름 출력
+
+4. 트랙잭션처리
+-xml설정
+-어노테이션설정
+ 1. DatabaseConfiguration 클래스에 관련설정추가
+ 2. @Transactional 인터페이스/클래스/메서드에 추가
+-aop : 이번 branch에서는 aop적용
+>>>>>어노테이션설정,aop 각각의 장단점이 있음
+ 
