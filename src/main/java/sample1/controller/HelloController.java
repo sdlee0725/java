@@ -11,6 +11,10 @@ public class HelloController {
 		//return "Hello World2!";
 		//return "Hello World3!";
 		//return "Hello World4!";
+<<<<<<< HEAD
 		return "Hello new World5!";
+=======
+		return "Hello World5!";
+>>>>>>> refs/remotes/origin/dev_20191125
 	}
 }
