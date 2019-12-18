@@ -13,6 +13,21 @@ CREATE TABLE `t_board` (
 
 
 
+CREATE TABLE `t_file` (
+  `idx` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '일련번호',
+  `board_idx` int(10) unsigned NOT NULL COMMENT '게시글번호',
+  `original_file_name` varchar(255) CHARACTER SET latin1 NOT NULL COMMENT '원본파일이름',
+  `stored_file_path` varchar(50) CHARACTER SET latin1 NOT NULL COMMENT '파일저장경로',
+  `file_size` int(15) unsigned NOT NULL COMMENT '파일크기',
+  `creator_id` varchar(50) CHARACTER SET latin1 NOT NULL COMMENT '작성자',
+  `created_datetime` datetime NOT NULL COMMENT '작성일시',
+  `updater_id` varchar(50) CHARACTER SET latin1 DEFAULT NULL COMMENT '수정자',
+  `updated_datetime` datetime DEFAULT NULL COMMENT '수정일시',
+  `deleted_yn` char(1) CHARACTER SET latin1 NOT NULL DEFAULT 'N' COMMENT '삭제여부',
+  PRIMARY KEY (`idx`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
 
 
 Chapter04
